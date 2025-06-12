@@ -11,7 +11,7 @@
 We’ve noticed that many students rely on apps like Split wise to manage shared expenses. At the same time, most student apartments have chore charts stuck on the fridge—but those often get ignored. Asking a roommate to pay up or clean the dishes can get awkward. That’s where our app comes in. Our goal is to create an all-in-one roommate management app that handles both shared expenses and chores—without the awkward conversations.
 MyRoommateApp is a full-featured mobile application built with React Native (Expo) and a PHP + MySQL backend, designed for roommates and shared households. The app streamlines chore scheduling, expense tracking, and group management — all accessible through an intuitive and modern UI.
 
-## What This App Doe's :
+## What This App Does :
 
 ### 1. Group Creation and Joining
 -	Users can start a new group by choosing a group name and you’re a unique username. After that, the app will give a unique code for the new group.
