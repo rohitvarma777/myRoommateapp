@@ -1,178 +1,171 @@
-# MyRoommateApp
+# Final Project
 
-Project Idea: We’ve noticed that many students rely on apps like Splitwise to manage shared expenses. At the same time, most student apartments have chore charts stuck on the fridge—but those often get ignored. Asking a roommate to pay up or clean the dishes can get awkward. That’s where our app comes in. Our goal is to create an all-in-one roommate management app that handles both shared expenses and chores—without the awkward conversations.
+## Title: myRoomMateApp
 
-MyRoommateApp is a full-featured mobile application built with **React Native (Expo)** and a **PHP + MySQL backend**, designed for roommates and shared households. The app streamlines **chore scheduling**, **expense tracking**, and **group management** — all accessible through an intuitive and modern UI.
+### Submitted by Rohit Nadimpalli, Mohamed Ashiq Basheer Ahamed
 
----
+### Note : I have uploaded word document for clear screen shots of the application
 
-## Team Members
+## Design and Purpose
 
-- **Mohamed Ashiq Basheer Ahamed**
-- **Rohit Varma Nadimpalli**
-
----
+We’ve noticed that many students rely on apps like Split wise to manage shared expenses. At the same time, most student apartments have chore charts stuck on the fridge—but those often get ignored. Asking a roommate to pay up or clean the dishes can get awkward. That’s where our app comes in. Our goal is to create an all-in-one roommate management app that handles both shared expenses and chores—without the awkward conversations.
+MyRoommateApp is a full-featured mobile application built with React Native (Expo) and a PHP + MySQL backend, designed for roommates and shared households. The app streamlines chore scheduling, expense tracking, and group management — all accessible through an intuitive and modern UI.
 
 ## What This App Does
 
 ### 1. Group Creation and Joining
-- Users can **create** a new group by providing a group name and username. // something which says system generates a unique code 
-- Alternatively, users can **join** an existing group by entering a shared group code.
-
+-	Users can start a new group by choosing a group name and you’re a unique username. After that, the app will give a unique code for the new group.
+-	Alternatively, users can ‘join’ an existing group by entering a shared group code.
 ### 2. Home Dashboard
-- Once inside, users land on a dashboard with access to:
-  - Chore Management
-  - Expense Tracking
-  - Group Member List
-  - Logout
-
-### 3. Task Scheduling
-- Add new chores with estimated time and frequency.
-- View current assignments with details like:
-  - Who is assigned  
-  - Due date  
-  - Status: Pending / Completed / Overdue  
-- Once we click Assign chores are equally assigned with a single tap.
-- Users can mark their assigned chores as **Done**. for the week and if some clicks assign tasks it will assign tasks again
-
+-	Upon entering the app, users will see a dashboard that allows them to manage chores, track expenses, view group members, and log out.
+### 3. Managing Chores
+-	Users can add new chores, specifying how long they should take and how often they need to be done. They can also see who is currently assigned to each chore, its due date, and its status (pending, completed, or overdue). A single tap on an "Assign" button will evenly distribute chores among group members. Users can mark their own assigned chores as "Done" for the week. If someone clicks "Assign" again, the chores will be re-assigned.
 ### 4. Expense Tracking
-- Log group expenses with description, amount, payer, and involved users.
-- View all group expenses in real time.
-- Helps avoid awkward money talk among roommates!
-
+-	Users can record shared group expenses, including what the expense was for, the total cost, who paid, and which group members are involved. All group expenses can be viewed instantly, which helps make money discussions among roommates less uncomfortable.
 ### 5. Group Member Management
-- View a list of all members in the group.
-- Share group code via the device’s native sharing options.
+-	View a list of all members in the group.
+-	Share group code via the device’s native sharing options.
+  
+## Tools Used
 
----
-
-## How to Run the App
-
-
-
-
-## Directory Overview
-
-MyRoommateApp/  
-├── App.js                      
-├── index.js                    
-├── app.json                    
-├── package.json                
-├── roommate_app.sql            
-├── components/
-│   └── CustomTextInput.js     
-│   
-├── screens/  
-│   ├── GroupScreen.js          
-│   ├── HomeScreen.js           
-│   ├── TaskSchedulingScreen.js   
-│   ├── ExpenseManagementScreen.js   
-│   └── GroupMembersScreen.js   
-│
-└── php-api/   
-├── db_connect.php  
-├── create_group.php  
-├── join_group.php  
-├── add_expense.php  
-├── get_expenses.php  
-├── fetch_group_members.php  
-├── add_chore.php  
-├── fetch_chores.php  
-├── assign_chores.php  
-└── mark_chore_complete.php
-
-
----
-
-Output :
-
-Screen shot 1: This screen shot shows the first group joining page 
-
+-	⁠Frontend (React Native Application)
+-	Backend (PHP API)
+-	MySQL 
+-	Android Studio (Emulator) 
+-	Xampp
+  
 ## Limitations & Notes
 
-- The app currently uses username-based identification & Group code without authentication.
-- IP address must be configured manually for backend calls.
-- Localhost backend does not support remote access unless configured (use LAN IP).
-- Some error handling assumes a functional server and clean data.
+-	The app currently uses username-based identification & Group code without authentication.
+-	IP address must be configured manually for backend calls.
+-	Localhost backend does not support remote access unless configured (use LAN IP).
+-	Some error handling assumes a functional server and clean data.
 
----
+## Future Improvements
 
-## Future Enhancements
+We plan to add several new features and improvements, including:
+-	Secure user accounts: Implementing a robust login/signup system with secure session handling.
+-	Expense summaries: Providing charts and summaries to clearly show each person's contribution to group expenses.
+-	Overdue chore alerts: Sending push notifications via Firebase to remind users about overdue chores.
+-	Enhanced group management: Adding more options for group settings, such as removing members or changing the group name.
+-	Improved user experience: Further refining the app's usability and overall user experience, which was limited by time constraints during development.
 
-- Add secure login/signup and session storage.
-- Include charts/summary for expense contributions.
-- Add push notifications for overdue chores using firebase.
-- Enhance group settings (remove members, rename group, etc.)
+## Screens in the App
 
----
+### Screen 1:
+Group Selection This screen is where you start. You'll enter your username and then choose if you want to create a new group or join a group that already exists.
+
+<img width="196" alt="image" src="https://github.com/user-attachments/assets/1bba02a3-2e50-406b-bcb9-272f29bc0c28" />
 
 
-## Screenshots
+### Screen 2:
+"My Roommate" Group Dashboard, Once you enter your username and group code. This screen displays a pop-up message confirming, "You are already a member of this group."
 
-<!-- 1. Chore Completion -->
-<img src="Screenshots/ChoreCompletion.png" alt="ChoreCompletion" width="300"/>
-<p>The image shows the “Manage Chores” screen of a roommate app with a confirmation dialog asking if the user completed the “cleaning” chore.</p>
+<img width="196" alt="image" src="https://github.com/user-attachments/assets/bb4a2d88-f786-4ef4-b943-b71d6ef3e8f6" />
 
-<!-- 2. Manage Chores -->
-<img src="Screenshots/managechores.png" alt="Manage Chores" width="300"/>
-<p>The image shows the “Manage Chores” screen of the app.</p>
+### Screen 3:
+"My Roommate" Group Dashboard This screen presents "My Roommate" group dashboard. It clearly displays your unique group code and a welcoming message. From here, you can easily access dedicated sections for managing chores, tracking expenses, viewing group members, and logging out.
 
-<!-- 3. Chore Completed -->
-<img src="Screenshots/chorecompleted.png" alt="Chore Completed" width="300"/>
-<p>The image shows a “Manage Chores” screen where a user successfully marked a task as completed, and other chores are listed with their status and assignment details.</p>
+<img width="213" alt="image" src="https://github.com/user-attachments/assets/9ba2f1aa-a9a6-4e7f-8526-9e35e7c1b0db" />
 
-<!-- 4. Already Member -->
-<img src="Screenshots/alreadymember.png" alt="Already Member" width="300"/>
-<p>The screen shows a “My Roommate” group dashboard with a success alert stating “You are already a member of this group.”</p>
 
-<!-- 5. Group Screen -->
-<img src="Screenshots/groupscreen.png" alt="Group Screen" width="300"/>
-<p>The “Manage Chores” screen lists all chores for group 620—with buttons to add a new chore or assign chores equally—and shows each task’s details (time, frequency, assignee, due date, and status).</p>
+### Screen 4:
+Manage Chores Overview This screen, titled "Manage Chores," displays a comprehensive list of all tasks for Group 620. It includes buttons to either add a new chore or automatically assign existing chores equally among members. For each chore, details like estimated time, frequency, the assigned person, due date, and current status are clearly shown.
 
-<!-- 6. New Chore Added -->
-<img src="Screenshots/newchore.png" alt="New Chore Added" width="300"/>
-<p>The screen displays a “Success” alert confirming that a new chore was added successfully, over the Manage Chores list.</p>
+<img width="200" alt="image" src="https://github.com/user-attachments/assets/6331f44e-78ab-41e9-af2c-8a7590a59bd8" />
 
-<!-- 7. Add New Chore Form -->
-<img src="Screenshots/addnewchore.png" alt="Add New Chore Form" width="300"/>
-<p>A modal overlay with a form to add a new chore—entering its name, estimated hours, choosing frequency, and buttons to cancel or submit.</p>
+### Screen 5:
+Add New Chore This image shows a pop-up window (modal) appearing over the "Manage Chores" screen. It's a form that lets users add a new chore by typing in its name, estimating the hours it will take, and selecting how often it should occur. There are also options to cancel or submit the new chore.
 
-<!-- 8. Group Dashboard -->
-<img src="Screenshots/groupcreated.png" alt="Group Dashboard" width="300"/>
-<p>The “My Roommate” dashboard shows your group code and greeting, with buttons to manage chores, expenses, members, and logout.</p>
+<img width="203" alt="image" src="https://github.com/user-attachments/assets/02815573-ab01-41ec-b179-2d1388ed40cc" />
 
-<!-- 9. Expenses Screen -->
-<img src="Screenshots/expensesscreen.png" alt="Expenses Screen" width="300"/>
-<p>The “Manage Expenses” screen displays recent expense cards (showing description, amount, payer, and shared-with tags) and a “Who Owes Whom?” summary detailing each roommate’s owed balances.</p>
+### Screen 6:
 
-<!-- 10. Chore Added Confirmation -->
-<img src="Screenshots/choreadded.png" alt="Chore Added Confirmation" width="300"/>
-<p>A popup alert confirming “Chore added successfully” appears over the Manage Chores screen.</p>
+Chore Added Confirmation This screen confirms that a new chore has been successfully added. A "Success" alert box is displayed on top of the "Manage Chores" list, letting the user know their action was successful.
 
-<!-- 11. Select Group / Home Screen -->
-<img src="Screenshots/homescreen.png" alt="Select Group / Home Screen" width="300"/>
-<p>The “Select Group” screen prompts you to enter your username and either create a new roommate group or join an existing one.</p>
+<img width="205" alt="image" src="https://github.com/user-attachments/assets/ee3488d7-f08b-4651-bc43-691860ef7544" />
 
-<!-- 12. Add Expense Form -->
-<img src="Screenshots/addexpenses.png" alt="Add Expense Form" width="300"/>
-<p>A modal dialog for adding a new expense, with inputs for description, amount, payer selection, participant tags, and buttons to submit or cancel.</p>
+### Screen 7:
 
-<!-- 13. View Group Members -->
-<img src="Screenshots/viewmembers.png" alt="View Group Members" width="300"/>
-<p>The “Group Members” screen displays your group code with a share button and lists each member’s name and role.</p>
+Unassigned and Assigned Chores This "Manage Chores" screen displays a mix of tasks: some, like "CLEAN FLOOR" and "WASH DISHES," are currently unassigned, while others already show who they're assigned to. Each chore entry includes details such as its estimated time, frequency, assignment status, and due date.
 
-<!-- 14. Expense Added Confirmation -->
-<img src="Screenshots/expenseadded.png" alt="Expense Added Confirmation" width="300"/>
-<p>A success alert confirming “Expense added successfully!” appears over the Manage Expenses list.</p>
+<img width="217" alt="image" src="https://github.com/user-attachments/assets/afb5b6bd-b0bd-4856-ae80-7748cbf7a0da" />
 
-<!-- 15. Assigned Chores Confirmation -->
-<img src="Screenshots/assignedchore.png" alt="Assigned Chores Confirmation" width="300"/>
-<p>A popup alert confirms “Successfully assigned 2 chores.” on the Manage Chores screen.</p>
+### Screen 8:
+Chore Assignment Confirmation When clicked on assign chores, a pop-up alert appears on the screen, confirming that "Successfully assigned 2 chores."
 
-<!-- 16. Share Sheet -->
-<img src="Screenshots/sharesheet.png" alt="Share Sheet" width="300"/>
-<p>A native share sheet appears with prewritten invite text letting you copy or send your group code to others.</p>
+<img width="217" alt="image" src="https://github.com/user-attachments/assets/7abb893d-817e-406e-8af1-c5b7e2957cdc" />
 
-<!-- 17. Chore List (Unassigned) -->
-<img src="Screenshots/chorelist.png" alt="Chore List (Unassigned)" width="300"/>
-<p>The “Manage Chores” view shows unassigned chores like “CLEAN FLOOR” and “WASH DISHES” alongside already assigned tasks, each with estimated time, frequency, assignment status, and due dates.</p>
+### Screen 9:
+"Mark Done" Option This image highlights the specific area on the chore management screen where a user can select the option to mark a chore as "Done."
+
+<img width="219" alt="image" src="https://github.com/user-attachments/assets/f44af117-3311-4bc0-a2a4-cc9f676da2ab" />
+
+### Screen 10:
+Chore Marked as Completed This "Manage Chores" screen now displays that a task has been successfully marked as completed by a user. All other chores remain listed with their current status and assignment details visible.
+
+<img width="219" alt="image" src="https://github.com/user-attachments/assets/7cedadee-9494-4c43-a7b8-8e7acde7d63e" />
+
+### Screen 11:
+"Confirm Completion" Dialog On the "Manage Chores" screen, a pop-up confirmation dialog is shown, asking the user to confirm if they have completed the "cleaning" chore.
+
+<img width="253" alt="image" src="https://github.com/user-attachments/assets/73f9cf77-f872-40af-91b1-748a4482f640" />
+
+
+### Screen 12:
+Manage Expenses Dashboard This screen, "Manage Expenses," provides an overview of recent group spending. It features individual expense cards detailing the description, amount, who paid, and who shared in the cost. Below these, there's a "Who Owes Whom?" summary, which clearly outlines the current financial balances between roommates.
+
+<img width="232" alt="image" src="https://github.com/user-attachments/assets/f6d0e10e-9136-404f-8ff6-9821a97d6bb9" />
+
+### Screen 13:
+Add New Expense Dialog This image displays a pop-up window (modal) for adding a new expense. It includes fields for the expense's description and amount, a dropdown or selection for who paid, and options to tag which roommates participated in (and thus owe for) the expense. Buttons to either submit or cancel the new expense are also present.
+
+<img width="232" alt="image" src="https://github.com/user-attachments/assets/fed1cdf3-7c3d-41c5-9475-121f76929b18" />
+
+### Screen 14:
+Expense Added Confirmation This screen shows a "Success" alert message that reads "Expense added successfully!" The alert appears overlaid on the "Manage Expenses" list, confirming that the new expense has been recorded.
+
+<img width="235" alt="image" src="https://github.com/user-attachments/assets/670191e0-856c-412c-9d66-ba2eb871afba" />
+
+### Screen 15: 
+
+Group Members & Share Group Code This screen, labeled "Group Members," shows your unique group code prominently along with a convenient "Share" button. It also provides a clear list of all group members, displaying each person's name and their assigned role. When the "Share" button is tapped, a standard sharing menu (native share sheet) appears, pre-filled with an invitation message that allows you to easily copy the group code or send it to others through various apps..
+
+<img width="237" alt="image" src="https://github.com/user-attachments/assets/5113af92-1b04-4e07-9339-a9b048a76f22" />
+<img width="229" alt="image" src="https://github.com/user-attachments/assets/f2da7606-88fa-412d-9979-86a3f9e6798e" />
+
+## Backend SQL Tables: 
+
+### Screen shot 1 -
+This image shows the phpMyAdmin interface for the myroommateapp database, displaying a list of all its tables. The tables include chores, chore_assignments, expense_participants, expenses, groups, posts, users, and user_groups.
+
+<img width="357" alt="image" src="https://github.com/user-attachments/assets/e9033675-3774-4ece-8865-dc6edbdc6883" />
+
+### Screen shot 2: 
+This image shows the users table from your MyRoommate App database, showing user IDs, usernames and their associated group IDs.
+
+<img width="364" alt="image" src="https://github.com/user-attachments/assets/88955c63-fbc5-4b49-a61e-3dd56b37ceea" />
+
+### Screen shot 3 -
+This image displays the expenses table from your MyRoommate App database. It lists recorded expenses with details like their ID, the group they belong to, the amount, a description, who paid, and when it was created.
+
+<img width="369" alt="image" src="https://github.com/user-attachments/assets/b8c11de3-00e6-41f2-b81f-69023f31bab7" />
+
+### Screen shot 4 -
+This image shows the chores table from your MyRoommate App database. It lists various chores with their ID, name, estimated hours, frequency (weekly/daily), and creation timestamp.
+
+<img width="383" alt="image" src="https://github.com/user-attachments/assets/54ad2d0b-4b19-4d8b-b3cd-43460903d76b" />
+
+### Screen shot 5 -
+This image displays the user with groups table in your MyRoommate App database. It shows the mapping of users to specific groups, indicating which user (by user_id and username) belongs to which group_id.
+
+<img width="332" alt="image" src="https://github.com/user-attachments/assets/3d1d612a-9a14-4655-afdf-f1789d1d2473" />
+
+### Screen shot 6 -
+This image displays the XAMPP Control Panel, showing that both your Apache Web Server and MySQL Database are currently Running. This confirms your local server environment is active, allowing your React Native app to connect to its PHP backend and database
+
+<img width="271" alt="image" src="https://github.com/user-attachments/assets/dac1015a-bab2-462a-b41e-3d0ef934ca6e" />
+
+ 
+
+
