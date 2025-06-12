@@ -33,6 +33,17 @@ MyRoommateApp is a full-featured mobile application built with React Native (Exp
 -	MySQL 
 -	Android Studio (Emulator) 
 -	Xampp
+
+## Features: 
+
+### Group Unique Code Generator:
+The React Native app sends a request to PHP, which generates and validates a unique alphanumeric group code. This code is stored in MySQL and then returned to the app for the user to share.
+
+### Chore Scheduling and Assignment:
+PHP manages chore assignments using a round-robin algorithm based on estimated hours, creating assignments in MySQL with due dates. Users can mark tasks complete, updating the database, and overdue statuses are managed automatically.
+
+### Expense Tracking and Calculation:
+The app sends expense details to PHP, which records the main expense and calculates/stores individual participant shares in MySQL. A PHP endpoint then fetches and joins data to provide a comprehensive view of all group expenses.
   
 ## Limitations & Notes
 
