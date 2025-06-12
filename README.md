@@ -4,7 +4,7 @@
 
 ### Submitted by Rohit Nadimpalli, Mohamed Ashiq Basheer Ahamed
 
-### Note : I have uploaded word document for clear screen shots of the application and Screenshots are available in the screenshots folder
+### Note : I have uploaded word document for clear screen shots of the application (INFO670_Final_Project_Rohit_ASHIQ) and Screenshots are available in the screenshots folder
 
 ## Design and Purpose
 
